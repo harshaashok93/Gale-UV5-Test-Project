@@ -1,0 +1,55 @@
+.error-bg-img
+    background url("/static/img/GreenLeaves_BottomRight.png") no-repeat bottom -94px right -40px
+    background-size 350px
+    @media screen and (max-width $screen-xs-max)
+        background-position bottom -54px right -25px
+        background-size 240px
+
+.error-header
+    background url("/static/img/Background_News@2x.jpg") no-repeat
+    background-size cover
+
+    h1
+        font-size $h2
+        color $live-green
+        margin 30px 0
+        text-align center
+        font-family $Raleway
+        font-weight $font300
+        @media screen and (max-width $screen-xs-max)
+            font-size $mobile-h2
+
+.go-to-home
+    display block
+    margin 0 auto
+    float none
+    span
+        display block
+        margin 0 auto
+        float none
+        a
+            button-1()
+            text-align center
+            display block
+            font-size $mobile-h4
+            color $white
+            width 243px
+            margin-bottom 165px
+            height auto
+            @media screen and (max-width $screen-xs-max)
+                margin-bottom 210px
+
+.error-cnt
+    clear both
+    text-align center
+    .rich-text
+        p
+            max-width 578px
+            margin auto
+            padding-top 40px
+            padding-bottom 25px
+            @media screen and (max-width $screen-xs-max)
+                max-width 280px
+                font-size $mobile-h5
+                padding-top 23px
+                padding-bottom 27px

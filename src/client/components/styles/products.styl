@@ -1,0 +1,241 @@
+.products-panel
+    background url('/static/img/Background_Marble.jpg') no-repeat top center
+    background-size cover
+
+    .products-box
+        padding 0 60px 60px
+
+        @media screen and (max-width $screen-xs-max)
+            padding 0 20px 30px
+
+        .product-listing
+            .categories-list
+                ul
+                    li
+                        font-family $Raleway
+                        font-weight $font300
+                        color $text-grey
+                        font-size $h3
+
+                        &.selected
+                            font-weight $font500
+                            color $live-green
+
+            .products
+                @media screen and (min-width 1025px)
+                    min-height 555px
+                    height auto
+
+                .category-description
+                    color $dark-grey
+                    font-size $h5
+                    font-weight 300
+                    margin-bottom 40px
+                    @media screen and (max-width $screen-xs-max)
+                        display none
+
+                .product-info
+                    .product-name
+                        font-family $Raleway
+
+                        h2
+                            background none
+                            font-size $small-sub-heading
+                            font-weight $font300
+                            color $live-green
+                            text-transform capitalize
+                            padding 0
+                            min-height 60
+                            height auto
+                            @media screen and (width 1024px)
+                                min-height 78px
+                                height auto
+
+                        a
+                            button-2()
+                            font-size $CTA-copy
+                            line-height 40px
+
+                        h6
+                            font-size $small-CTA-copy
+                            font-weight $font300
+                            text-align center
+                            color $dark-grey
+                            margin 10px 0 20px
+                            min-height 19px
+
+                    .product-image
+                        img
+                            height 270px
+
+        .mobile-product-listing
+            .panel
+                background-color transparent
+                border 0
+                box-shadow none
+
+                .panel-heading
+                    background-color transparent
+                    text-align center
+                    border-bottom 1px solid $live-green
+
+                    a
+                        font-family $Raleway
+                        font-size 42px
+                        font-weight $font300
+                        color $dark-grey
+
+                    a[aria-expanded= "true"]
+                        color $category-title
+                        font-weight $font500 !important
+
+                        &:after
+                            content ''
+                            display block
+                            width 22px
+                            height 22px
+                            position absolute
+                            bottom -12px
+                            left 0
+                            right 0
+                            background-color $category-title
+                            margin 0 auto
+                            border 4px solid $category-title
+                            border-right 0
+                            border-top 0
+                            background-color #fff
+                            transform rotate(135deg)
+                            z-index 99
+
+                    &:before
+                        display none
+
+                .panel-body
+                    background-color $white
+                    border-top 3px solid $category-title
+                    box-shadow 0 3px 15px #888
+
+                    .product-info
+                        padding 0
+                        text-align center
+
+                        img
+                            margin 0 auto
+
+                        h2
+                            font-family $Raleway
+                            font-size $mobile-h3
+                            font-weight $font300
+                            color $live-green-light
+                            padding-left 28px
+                            padding-right 28px
+                            min-height 60px
+
+                        h6
+                            font-size $mobile-h5
+                            font-weight $font300
+                            text-align center
+                            color $dark-grey
+                            margin 10px 0 20px
+                            min-height 19px
+
+                        a
+                            button-2()
+                            font-family $Raleway
+                            margin-bottom 50px
+                            font-size $mobile-h4
+
+                    .product-image
+                        img
+                            height 270px
+
+                    .show-more-results
+                        text-align center
+
+                        button
+                            background transparent
+                            border none
+                            color $live-green-light
+                            @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                                position relative
+
+                            .glyphicon-menu-down
+                                font-size 30px
+                                @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                                    position absolute
+                                    top 370px
+                                    right 130px
+
+.loading-content
+    font-family $Raleway
+    text-align center
+    font-weight $font500
+    color $live-green
+
+.store-locator-band
+    height 168px
+    font-family $Raleway
+    margin-bottom 60px
+    background url(/static/img/Left_Leaves@2x.png) no-repeat left -50px top -20px,url(/static/img/store_locator_bg.png) no-repeat right 70px top 0
+    background-size 130px,371px
+    background-color $live-green-light
+
+    @media screen and (max-width $screen-sm-max)
+        height 387px
+        background url(/static/img/Left_Leaves@2x.png) no-repeat left -50px top -20px,url(/static/img/store_locator_mobile.png) no-repeat center  bottom 0
+        background-size 130px,371px
+        background-color $live-green-light
+
+    h2
+        font-size $h3
+        font-weight $font100
+        color $white
+        margin 56px 0 0 155px
+        display inline-block
+        position relative
+        &:before
+            background url(/static/img/Find_Location_White@2x.png) no-repeat
+            background-size 30px
+            display block
+            content ''
+            float left
+            width 32px
+            height 70px
+            position absolute
+            left -40px
+            top -3px
+            @media screen and (max-width $screen-sm-max)
+                left 0
+                right 0
+                margin 0 auto
+                top -60px
+                background-size 24px
+        @media screen and (max-width $screen-sm-max)
+            margin 10px auto
+            text-align center
+            font-size 28px
+            margin-top 80px
+            width 100%
+            padding 0 20px
+            margin-bottom 20px
+
+    p
+        display inline-block
+        @media screen and (max-width $screen-sm-max)
+            display block
+            text-align center
+        a
+            button-2()
+            font-family $Raleway
+            text-align center
+            margin-left 30px
+            width 220px
+            line-height 40px
+            font-size 20px
+            text-decoration none
+            @media screen and (max-width $screen-sm-max)
+                margin 0
+
+
+
+

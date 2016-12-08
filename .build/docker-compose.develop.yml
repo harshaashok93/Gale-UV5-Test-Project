@@ -1,0 +1,55 @@
+version: '2'
+
+services:
+  app:
+    image: 270157796386.dkr.ecr.us-west-2.amazonaws.com/hain/liveclean/unchained_ui:develop
+    external_links:
+      - psql_database:database
+      - memcached:memcached
+      - redis:redis
+      - elasticsearch:elasticsearch
+    command: "uwsgi --socket :8000 --wsgi-file config/wsgi.py --chdir /application/src/server"
+    ports:
+      - 127.0.0.1:8012:8000
+    volumes:
+      - hain-liveclean-ui-assets:/application/src/server/assets
+      - hain-liveclean-ui-media:/application/src/server/media
+      - hain-liveclean-ui-logs:/app/logs
+      - hain-liveclean-ui-backup:/application/backup
+      - ./shared:/shared
+    restart: "unless-stopped"
+    env_file:
+      - .env
+
+  celery:
+    image: 270157796386.dkr.ecr.us-west-2.amazonaws.com/hain/liveclean/unchained_ui:develop
+    external_links:
+      - psql_database:database
+      - memcached:memcached
+      - redis:redis
+      - elasticsearch:elasticsearch
+    command: "/bin/bash -c 'cd /application/src/server && celery worker -A config --logfile /application/logs/celery.log'"
+    volumes:
+      - hain-liveclean-ui-assets:/application/src/server/assets
+      - hain-liveclean-ui-media:/application/src/server/media
+      - hain-liveclean-ui-logs:/app/logs
+      - hain-liveclean-ui-backup:/application/backup
+      - ./shared:/shared
+    restart: "unless-stopped"
+    env_file:
+      - .env
+
+networks:
+  default:
+    external:
+      name: docker-develop-network
+
+volumes:
+  hain-liveclean-ui-assets:
+    external: true
+  hain-liveclean-ui-media:
+    external: true
+  hain-liveclean-ui-logs:
+    external: true
+  hain-liveclean-ui-backup:
+    external: true

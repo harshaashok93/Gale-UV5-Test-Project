@@ -1,0 +1,37 @@
+version: '2'
+services:
+  database:
+    image: postgres:9.5.2
+    env_file:
+      - ./src/server/config/settings/.env
+  memcached:
+    image: memcached:1.4
+    env_file:
+      - ./src/server/config/settings/.env
+  redis:
+    image: redis:3.2
+    env_file:
+      - ./src/server/config/settings/.env
+  elasticsearch:
+    image: elasticsearch:1.7
+    env_file:
+      - ./src/server/config/settings/.env
+  app:
+    image: masood09/django-development:0.1.0
+    links:
+      - database
+      - memcached
+      - redis
+      - elasticsearch
+    volumes:
+      - .:/application
+      - ~/.ssh:/root/.ssh
+      - app-python-site-packages:/usr/local/lib/python3.4/site-packages
+      - app-usr-local-bin:/usr/local/bin
+    env_file:
+      - ./src/server/config/settings/.env
+volumes:
+  app-python-site-packages:
+    driver: local
+  app-usr-local-bin:
+    driver: local

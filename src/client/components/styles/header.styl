@@ -1,0 +1,380 @@
+.header-panel
+    position relative
+    z-index 100
+    .logo
+        text-align center
+        display inline-block
+        margin-bottom 20px
+        @media screen and (max-width $screen-sm-max)
+            margin-bottom: 0;
+
+        .links
+            float none
+            display inline-block
+
+            @media screen and (max-width $screen-sm-max)
+                float left
+                width 33.33%
+                display block !important
+
+                a
+                    display block !important
+                    width 100%
+
+                    img
+                        width: 32px;
+                        height: 28px;
+                        margin-left: -10px;
+                        margin-top: 25px;
+
+
+                &.mobile-logo
+                    float left
+                    width 60%
+                    display block
+                    span
+                        width 100%
+                        float left
+                        a
+                            display block
+                            width 100%
+                        img
+                            width 148px
+                            height auto
+                            margin 20px auto !important
+
+
+            img
+                width 180px
+                margin 20px 0 0
+
+        .mobile-search-icon
+            display none
+            @media screen and (max-width $screen-sm-max)
+                width 20%
+                display block
+                text-align right
+                span
+                    float right
+                    a
+                        img
+                            width: 32px;
+                            height: 32px;
+                            margin-top: 20px;
+                            margin-right: -5px;
+
+        .search-box
+            display none
+
+            @media screen and (max-width $screen-sm-max)
+                position absolute
+                width 100%
+                left 0
+                top 71px
+                background-color  $live-green-light
+                z-index 1
+                min-height 85px
+
+                .react-autosuggest__container
+                    display inline-block
+                    float left
+                    margin-top 30px
+                    margin-top 30px
+                    margin-left 40px
+                    width 59%
+
+                    .react-autosuggest__suggestions-container
+                        position absolute
+                        background-color $live-green-light
+                        left 0
+                        float left
+                        width 100%
+                        top 85px
+                        ul
+                            padding 0
+                            padding-left 30px
+                            padding-right 30px
+                            float left
+                            text-align left
+                            li
+                                list-style none
+                                font-size $small-sub-heading
+                                color $white
+                                font-weight normal
+                                cursor pointer
+                                margin-bottom 20px
+                form
+                    &:after
+                        content ''
+                        display block
+                        position absolute
+                        top 0px
+                        right 6%
+                        width 0
+                        height 0
+                        border-style solid
+                        border-width 15px 15px 0 15px
+                        border-color #fff transparent transparent transparent
+                        z-index 10
+                        margin 0 auto
+
+                    input
+                        border 0
+                        border-bottom 1px solid $white
+                        font-size $CTA-copy
+                        background-color transparent
+                        color $white
+                        padding 0
+                        display inline-block
+                        position relative
+                        top 0px
+                        width 100%
+
+                button
+                    width 61px
+                    height 41px
+                    border-radius 100px
+                    background url(/static/img/Search_Magnifier_Grey@2x.png) no-repeat center $white
+                    background-size 24px
+                    background-color $white
+                    display inline-block
+                    margin-top 22px
+                    margin-right 0px
+                    margin-left 14px
+                    border 0
+                    span
+                        display none
+                .close-btn
+                    display none
+
+
+
+
+        .hamburger-icon
+            display none
+            @media screen and (max-width $screen-sm-max)
+                width 20%
+    .nav-menu
+        float none
+        margin 0 auto
+        text-align center
+        display inline-block
+        clear both
+        font-family $Raleway
+
+        @media screen and (max-width $screen-sm-max)
+            display none
+            background $light-grey
+            padding 32px 54px 0px 42px
+            margin-top 12px !important
+            line-height 16px
+            a
+                color $white !important
+            .search-box
+                display none !important
+
+
+        .links
+            float none
+            display inline-block
+            padding 0 34px 30px
+
+            @media screen and (max-width $screen-sm-max)
+                width 100%
+                text-align center
+                span
+                    width 100%
+                    float left
+                    a
+                        width 100%
+
+
+            a
+                font-size 22px
+                font-weight $font300
+                color $live-green
+
+                &:hover
+                    color $live-green
+
+        .active
+            a
+                font-weight $font500
+                position relative
+
+                &:before
+                    background url(/static/img/Products_Leaves@2x.png) no-repeat left 0 center
+                    background-size 26px
+                    content ''
+                    display block
+                    position absolute
+                    left -30px
+                    top -10px
+                    width 34px
+                    height 34px
+
+
+
+        .search-box
+            float none
+            display inline-block
+            padding 0 30px 30px
+            > span
+                font-size 22px
+                font-weight $font300
+                color $live-green
+                float left
+                cursor pointer
+                position relative
+                &:before
+                    background url(/static/img/Search_Magnifier_Grey@2x.png) no-repeat center $white
+                    content ''
+                    display block
+                    float left
+                    width 32px
+                    height 32px
+                    background-size 70%
+                    margin-right 5px
+
+                &:after
+                    content ''
+                    display block
+                    position absolute
+                    bottom -37px
+                    right 0
+                    width 0
+                    height 0
+                    border-style solid
+                    border-width 15px 15px 0 15px
+                    border-color #fff transparent transparent transparent
+                    z-index 10
+                    left 40px
+                    margin 0 auto
+
+            .react-autosuggest__container
+                display inline-block
+                width 72%
+                float left
+                margin-top 10px
+
+                .react-autosuggest__suggestions-container
+                    float left
+                    width 100%
+                    padding-top 30px
+                    ul
+                        padding 0
+                        margin-left 6%
+                        float left
+                        width 100%
+                        li
+                            list-style none
+                            font-size $h5
+                            color $white
+                            font-weight normal
+                            cursor pointer
+
+                .react-autosuggest__suggestions-list
+                    @media screen and (max-width $screen-sm-max)
+                        height 400px
+                        overflow-y scroll
+
+                    li
+                        div
+                            text-overflow ellipsis
+                            white-space nowrap
+                            overflow hidden
+                            @media screen and (max-width $screen-sm-max)
+                                text-overflow none
+                                white-space none
+                                overflow hidden
+                                display -webkit-box
+                                -webkit-line-clamp 3
+                                -webkit-box-orient vertical
+
+
+            form
+                width 100%
+                height 0
+                background-color $live-green-light
+                position absolute
+                top 56px
+                visibility hidden
+                opacity 0
+                left 0
+                text-align left
+
+                input
+                    display inline
+                    margin-left 6%
+                    margin-top 1%
+                    width 90%
+                    background transparent
+                    border-bottom 1px solid $white
+                    padding 0
+                    font-size 32px
+                    color $white
+                    font-family $Raleway
+                    font-weight $font300
+
+                ::-webkit-input-placeholder
+                   color $white
+
+
+                :-moz-placeholder  /* Firefox 18- */
+                   color $white
+
+
+                ::-moz-placeholder   /* Firefox 19+ */
+                   color $white
+
+
+                :-ms-input-placeholder
+                   color $white
+                   display none !important
+
+                button
+                    width 84px
+                    display inline
+                    height 44px
+                    border-radius 100px
+                    box-shadow 0 2px 4px 0 rgba(0, 0, 0, 0.3)
+                    border solid 0.5px #9b9b9b
+                    margin 1.7% 0 0 44px
+                    background url(/static/img/Search_Magnifier_Grey@2x.png) no-repeat center $white
+                    background-size 30px
+
+                    span
+                        float none
+                        display none
+
+                .close-btn
+                    color $white
+                    display inline-block
+                    float none
+                    margin-left 10%
+                    background url(/static/img/CloseWindow_White.@2x.png) no-repeat center center
+                    width 34px
+                    height 34px
+                    cursor pointer
+                    i
+                        display none
+
+
+            .visible
+                visibility visible
+                min-height 104px
+                height auto
+                opacity 1
+                z-index 1
+                transition .3s ease all
+
+            .invisible
+                visibility hidden !important
+                opacity 0 !important
+                z-index 1
+                transition .3s ease all
+
+
+
+
+

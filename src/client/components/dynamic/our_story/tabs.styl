@@ -1,0 +1,177 @@
+.tab-wrap
+    h2
+        font-size $h1
+        color $dark-grey
+        font-weight $font300
+        text-align center
+        margin-top 40px
+        @media screen and (max-width $screen-xs-max)
+            font-size 32px
+
+        span
+            font-weight bold
+
+    ul.nav-tabs
+        width 1000px
+        margin 0 auto
+        text-align center
+
+        li
+            width 200px
+            border 0
+            box-shadow none
+            margin 0 40px
+            height 178.5px
+            background-color #ffffff
+            border solid 1px $live-green
+            margin 40px
+            display inline-flex
+            float none
+            text-align center
+            border-radius 0 30px
+
+
+            a
+                width 100%
+                height 100%
+                display block
+                background-color transparent
+                border 0
+                background-size 64px
+                background-position center top 20px
+                position relative
+                color $live-green
+
+                &:hover
+                    background-color transparent
+                    border 0
+
+                &:focus
+                    background-color transparent
+                    border 0
+
+                span
+                    position absolute
+                    bottom 0
+                    font-size $small-sub-heading
+                    font-weight $font300
+                    font-style normal
+                    font-stretch normal
+                    text-align center
+                    left 0
+                    right 0
+                    margin 0 auto
+                    padding 15px 15px 10px
+                    line-height 1.2
+
+            &.active
+                background-color $live-green
+                a
+                    color $white
+
+    .tab-content
+        width 80%
+        margin 0 auto
+        float none
+        box-shadow none
+        border 1px solid $live-green
+        border-radius 30px
+        margin-bottom 40px
+        padding 30px 40px
+
+        .active
+            p
+                font-size $small-sub-heading
+                color $live-green
+                margin-bottom 20px
+
+            ul
+                padding 0
+                text-align center
+                list-style none
+                border-bottom 1px dotted $live-green
+
+
+                li
+                    display inline-block
+                    color $live-green
+                    width 25%
+                    text-align center
+                    font-size $small-sub-heading
+                    padding 30px 0
+                    border-right 1px dotted $live-green
+                    margin-bottom: 10px;
+
+                    &:last-child
+                        border 0px
+    .slick-slide div
+        min-height auto
+    .tab-cards
+        padding 0 5px
+        .tab-cards-panel
+            border 1px solid $live-green
+            border-radius 0 30px
+            padding 20px 15px
+            margin-bottom 40px
+
+        .icon-title
+            min-height 0px
+            text-align center
+            margin-bottom 40px
+
+            img
+                margin 0 auto 10px
+                float none
+                height 48px
+                width auto
+
+            span
+                font-size 18px
+                font-weight $font500
+                color $live-green
+
+        .tab-details
+            p
+                color $live-green
+                font-size 18px
+
+            ul
+                list-style none
+                padding 0
+                margin-bottom 0px
+
+                li
+                    padding 10px 0
+                    color $live-green
+                    font-size 18px
+                    border-top 1px dotted $live-green
+                    font-weight 300
+                    
+                    b
+                        font-weight 500
+                    
+    // Mobile flex box adjustments
+    .our-story-mobile-tabs
+        .slick-list
+            extend-row-mixin()
+        .slick-track
+            display flex
+            flex-direction row
+            flex-wrap nowrap
+        .slick-slide
+            display flex
+            flex-direction column
+            position relative
+            height auto
+            > div
+                min-height 0px
+        .tab-cards-panel
+            expand-me-mixin()
+
+
+.tab-content ul:nth-child(even)
+    border 0px !important
+    
+
+
+

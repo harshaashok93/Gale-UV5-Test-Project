@@ -1,0 +1,78 @@
+.most-read-articles-heading
+    padding 0 0 30px
+
+    h2
+        font-size $h4
+        font-weight $font300
+        font-style normal
+        font-stretch normal
+        text-align center
+        color $dark-grey
+
+.most-read-articles
+    padding 0 90px 20px
+    background url(/static/img/GreenLeaves_BottomRight.png) no-repeat bottom -70px right -20px $white
+    background-size 18%
+
+    @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+        background-size: 40%;
+    @media screen and (max-width $screen-xs-max)
+        background url(/static/img/GreenLeaves_BottomRight.png) no-repeat bottom -40px right -20px $white
+        background-size 50%
+        padding 0 20px 20px
+
+    .row
+        display none
+
+    .bgImg
+        height 325px
+        display block
+        background-size cover
+        background-position center center
+        border 1px solid $white
+
+        .title
+            font-size $CTA-copy
+            color $text-grey
+            padding 6px
+            background white
+            width 90%
+            display inline-block
+            padding 6px 20px 9px
+            margin-top 20px
+            box-shadow 0 2px 6px 0 rgba(0, 0, 0, 0.3)
+
+            img
+                width 22px
+                heighg 22px
+
+        .social-title
+            width 60px
+
+    .no-padding
+        padding 0
+
+    .show-more
+        width 100%
+        text-align center
+        margin-top 32px
+        .showmore
+            font-size $small-sub-heading
+            color $live-green
+            display block
+            margin 0 auto
+            margin-bottom 70px
+            text-decoration none
+            background none
+            outline 0
+            border 0
+            &:hover
+                text-decoration none
+            &:after
+                content ""
+                background url(/static/img/Default_Chevrons_Down_DrkGreen@2x.png) no-repeat
+                width 18px
+                height 10px
+                background-size cover
+                display block
+                margin 0 auto

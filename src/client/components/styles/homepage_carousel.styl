@@ -1,0 +1,148 @@
+.carousel-panel
+    @media screen and (max-width $screen-xs-max)
+        background url('/static/img/Background_Marble.jpg') no-repeat top center
+        background-size cover
+        padding-top 20px
+    .carousel
+        padding 0px
+
+        .slick-slider
+            .slick-prev
+                margin-left 37px
+                width 18px
+                height 10px
+
+                img
+                    width 100%
+                    @media screen and (max-width $screen-xs-max)
+                        display none
+
+            .slick-list
+                height 540px
+                @media screen and (max-width $screen-xs-max)
+                    height 500px
+
+                .slick-track
+                    height 100%
+                    @media screen and (max-width $screen-xs-max)
+                        height 291px
+                        overflow visible
+
+                    .slick-slide
+                        @media screen and (max-width $screen-xs-max)
+                            padding 0 20px
+                        div
+                            background-size cover
+                            height 100%
+                            @media screen and (max-width $screen-xs-max)
+                                position relative
+
+
+                            .hero-content
+                                width 500px
+                                height auto
+                                background-color $white
+                                box-shadow 0 2px 4px 0 rgba(199, 199, 199, 0.5)
+                                border-top 5px solid $live-green-light
+                                border-radius 0px 10px 0px 10px
+                                margin 76px 0px 97px 120px
+                                text-align left
+                                padding-left 17px
+                                font-family $Raleway
+                                @media screen and (max-width $screen-xs-max)
+                                    min-height auto
+                                    width 100%
+                                    height 188px
+                                    margin 0 auto
+                                    position absolute
+                                    left 0px
+                                    right 30px
+                                    top 290px
+                                    padding 0
+
+                                @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                                    width 320px
+
+                                h2
+                                    width 429px
+                                    font-weight $font300
+                                    font-size $h2
+                                    font-style normal
+                                    line-height 1
+                                    color #185f4d
+                                    font-family $Raleway
+                                    display inline-block
+                                    margin-top 35px
+                                    margin-left 17px
+                                    margin-right 34px
+                                    margin-bottom 9px
+                                    @media screen and (max-width $screen-xs-max)
+                                        font-size $h5
+                                        width 80%
+                                        margin 20px auto
+                                        display block
+                                        min-height 64px
+                                        height auto
+
+                                    @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                                        width 100%
+                                        margin 20px auto
+                                        display block
+                                        font-size $h4
+
+
+                                p
+                                    display inline-block
+                                    font-family $Raleway
+                                    width 429px
+                                    font-size $CTA-copy
+                                    font-weight normal
+                                    line-height 1.6
+                                    color $dark-grey
+                                    margin-left 17px
+                                    margin-right 34px
+                                    margin-bottom 22px
+                                    @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                                        width 100%
+                                        display block
+                                        margin-left 0
+                                        padding-right 20px
+
+                                    @media screen and (max-width $screen-xs-max)
+                                        display none
+                                        &:last-child
+                                            display block
+                                            margin 0 auto
+                                            text-align center
+                                            width 80%
+
+                                a
+                                    button-1()
+                                    text-align center
+                                    text-decoration none
+                                    position relative
+                                    background-image none
+                                    line-height 40px
+
+                                    &:after
+                                        content ""
+                                        background-image url('/static/img/Chevrons_Right_White@2x.png')
+                                        display block
+                                        width 12px
+                                        height 20px
+                                        position absolute
+                                        background-size 100%
+                                        float right
+                                        right 20px
+                                        top 12px
+
+
+            .slick-next
+                margin-right 37px
+                width 18px
+                height 10px
+
+                img
+                    width 100%
+                    @media screen and (max-width $screen-xs-max)
+                        display none

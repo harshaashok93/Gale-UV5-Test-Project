@@ -1,0 +1,171 @@
+.news-letter-panel
+    background $live-green-light
+    min-height 160px
+    height auto
+    z-index 9999
+    display none
+
+    @media screen and (max-width $screen-sm-max)
+        min-height 400px
+
+    h3
+        font-size $h5
+        font-weight $font300
+        font-style normal
+        font-stretch normal
+        text-align center
+        color $white
+        margin 22px 0
+        @media screen and (max-width 1025px)
+            font-size $small-sub-heading
+            margin-top 55px
+
+    .close
+        opacity 1
+        position absolute
+        top 14px
+        right 10px
+        span
+            width 50px
+            height 50px
+        @media screen and (max-width $screen-sm-max)
+            width 50px
+            height 50px
+            top 8px
+            right 8px
+            padding 0
+
+    a.close
+        width 34px
+        height 34px
+        color $white
+        display inline-table
+        float none
+        margin-left 10%
+        background url(/static/img/CloseWindow_White.@2x.png) no-repeat center center
+        cursor pointer
+        opacity 1
+        @media screen and (max-width $screen-sm-max)
+            width 24px
+            height 24px
+
+    h4
+        font-size $h5
+        font-weight $font300
+        font-style normal
+        font-stretch normal
+        text-align center
+        color $white
+        display none
+        position absolute
+        left 0
+        right 0
+        top 50%
+        transform translateY(-90%)
+
+    form
+        width 100%
+        margin 0 auto
+        text-align center
+        @media screen and (min-width 1025)
+            display flex
+            align-items center
+            justify-content center
+        .alert-success
+            display block
+            width 100%
+            background none
+            border 0
+            font-size $h5
+            font-weight $font300
+            font-style normal
+            font-stretch normal
+            text-align center
+            color $white
+            position absolute
+            left 0
+            right 0
+            top 50%
+            transform translateY(-50%)
+
+            .close
+                text-indent 999px
+                visibility hidden
+        label
+            display none
+        .form-group
+            margin-right 20px
+            @media screen and (max-width $screen-sm-max)
+                min-height: 81px;
+                margin-right 0
+            button
+                button-2()
+                line-height 24px
+                top -4px
+                position relative
+
+        .form-group
+            width 190px
+            display inline-table
+            @media screen and (max-width $screen-xs-max)
+                width 100%
+            @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                width 80%
+
+            &:nth-of-type(3)
+                width 340px
+                @media screen and (max-width $screen-xs-max)
+                    width 100%
+
+                @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                    width 80%
+
+            input
+                width 100%
+                border 0
+                border-radius 3px
+                height 41px
+                font-size 24px
+                color $text-grey
+                font-weight $font300
+
+        .has-error
+            input
+                border 1px solid $white !important
+
+            .help-block
+                li
+                    color $white !important
+
+
+
+        ::-webkit-input-placeholder  /* WebKit browsers */
+            opacity 1 !important
+
+        :-moz-placeholder  /* Mozilla Firefox 4 to 18 */
+            opacity 1 !important
+
+        ::-moz-placeholder  /* Mozilla Firefox 19+ */
+            opacity 1 !important
+
+        .form-control::-moz-placeholder /* mozilla firefox */
+            color $text-grey  !important
+
+        :-ms-input-placeholder  /* Internet Explorer 10+ */
+            opacity 1 !important
+            color $text-grey
+
+        :-ms-input-placeholder.form-control /* Internet explorer  */
+            color $text-grey  !important
+
+        textarea::-webkit-input-placeholder  /* WebKit browsers */
+            color $text-grey  !important
+
+        textarea:-moz-placeholder  /* Mozilla Firefox 4 to 18 */
+            color $text-grey  !important
+
+        textarea::-moz-placeholder  /* Mozilla Firefox 19+ */
+            color $text-grey  !important
+
+        textarea:-ms-input-placeholder  /* Internet Explorer 10+ */
+            color $text-grey  !important

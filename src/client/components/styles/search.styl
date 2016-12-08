@@ -1,0 +1,135 @@
+.search
+    background url(/static/img/GreenLeaves_BottomRight.png) no-repeat bottom -70px right -20px $white
+    background-size 18%
+    @media screen and (max-width $screen-xs-max)
+       background url(/static/img/GreenLeaves_BottomRight.png) no-repeat bottom -40px right -20px $white
+       background-size 50%
+
+    .results-head
+            text-align center
+            font-weight $font300
+            color $live-green
+            font-size $h2
+            margin 0 -15px
+            padding 27px 0
+            background url(/static/img/Wood_texture_banner@2x.png) no-repeat center center
+            background-size cover
+
+            span
+                font-weight $font500
+                width 80%
+                word-wrap break-word
+                display block
+                margin 0 auto
+
+            @media screen and (max-width $screen-xs-max)
+                font-size $h5
+                font-weight $font300
+                background-size cover
+    .search-list
+        margin 0 auto
+        float none
+        margin-bottom 75px
+
+        h3
+            text-align center
+            font-weight $font400
+            padding 45px 0 230px
+
+            @media screen and (max-width $screen-xs-max)
+                font-size $small-CTA-copy
+                padding 20px 0 140px
+
+        .search-wrap
+            width 100%
+            display inline-block
+            padding 30px 0
+            border-bottom 1px solid $live-green
+            position relative
+
+            &:last-child
+                border 0px !important
+
+            .search-img
+                text-align center
+                overflow hidden
+                @media screen and (max-width $screen-xs-max)
+                    padding 0
+                img
+                    height 243px
+                    width auto
+                    margin 0 auto
+
+            .description
+                padding-right 150px
+                @media screen and (max-width $screen-xs-max)
+                    padding 0
+                h2
+                    font-size $h5
+                    color $live-green
+                    font-weight $font400
+                    margin 0 0 17px
+                    position relative
+                    @media screen and (max-width $screen-xs-max)
+                        font-size $mobile-h5
+                        margin-top 20px
+                        padding-right 110px
+                        line-height 1.4
+                        font-weight $font300
+
+                p
+                    font-size $small-sub-heading
+                    color $black
+                    line-height 1.2
+                    margin 0 0 24px
+                    @media screen and (max-width $screen-xs-max)
+                        font-size $mobile-h5
+                        margin-top 15px
+                        margin-bottom 30px
+                        line-height 1.4
+                        font-weight $font300
+
+                a
+                    button-2()
+                    text-decoration none
+                    text-align center
+                    border solid 0.5px #9b9b9b
+                    font-size $CTA-copy
+                    line-height 42px
+                    @media screen and (max-width $screen-xs-max)
+                        margin 0 auto
+                        float none
+                        display block
+
+            .type-icon
+                position absolute
+                top 0px
+                right -150px
+                width 60px
+                @media screen and (max-width $screen-xs-max)
+                    width 30px
+                    top 0%
+                    right 20px
+
+                img
+                    width 100%
+
+        .show-more-results
+            text-align center
+            button
+                background none
+                background-image url('/static/img/Default_Chevrons_Down_DrkGreen@2x.png')
+                background-repeat no-repeat
+                background-position center bottom 0
+                background-size 18px
+                border 0
+                font-size $small-sub-heading
+                color $live-green
+                font-weight $font300
+                margin 34px 0 0
+                padding-bottom 20px
+                outline none
+
+            @media screen and (max-width $screen-xs-max)
+                background-size 42px
+                text-indent -999px

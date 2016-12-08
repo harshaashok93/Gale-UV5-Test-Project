@@ -1,0 +1,887 @@
+// Product details row class: product-detail-panel
+// This is the row on PDP page right below header panel
+.product-detail-panel
+    background-image url("/static/img/Background_Marble.jpg") // TODO: Have this asset changed to 50% opacity, easiest solution
+    background-size 100% auto
+
+section.product-details
+
+    // Overrides for all carousels
+    .slick-track
+        display flex
+        flex-direction row
+        flex-wrap nowrap
+
+    .slick-slide
+        div // Override unchained slick slide height
+            min-height 0px
+    // React Slick doesn't hide disabled arrow by default, but we want to; reduces confusion
+    .slick-disabled
+        display none !important
+
+    // End all product details overrides
+
+    // Product image carousel
+    .product-detail-image-carousel
+        text-align center
+        // Category back link
+        .category-back-link
+            color $live-green
+            font-size 20px
+            font-weight 300
+            margin-top 15px
+            margin-bottom 15px
+            display inline-block
+            &:before
+                content ""
+                display inline-block
+                margin-right 16px
+                background-image url("/static/img/Default_Chevrons_Left_DrkGreen.png")
+                height 20px
+                width 13px
+                position relative
+                top 2px
+        .slick-slide
+            padding 0px 5px 10px
+            position relative
+        .slick-list
+            extend-row-mixin()
+            background-color $white
+        .carousel_image // Carousel image
+            height 217px
+            margin-top 0px
+            padding-top 0px
+            background-repeat no-repeat
+            background-size auto 100%
+        .carousel_image_wrapper // Carousel image background
+            background-color #f1f1f1
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3)
+        .glyphicon
+            display none // Carousel nav
+
+    // Main product info
+    .product-info-wrap
+        extend-row-mixin()
+        padding-bottom 30px
+        background-color $white
+
+        .product-info-border
+            border-top-right-radius 2em
+            border-bottom-left-radius 2em
+            box-shadow 0 2px 4px 0 rgba(199, 199, 199, 0.5), inset 0 1px 3px 0 rgba(0, 0, 0, 0.15)
+            overflow hidden
+
+        .product-info-content
+            padding 20px 20px 0px 20px
+            background #fff
+            border-top 5px solid $live-green
+
+        h2.product-info-name
+            font-size 20px
+            line-height 24px
+            color $live-green-light
+            margin 0px 0px 20px 0px
+            font-weight 300
+            text-align center
+
+        h3.product-info-category
+            font-size 20px
+            line-height 24px
+            color $live-green
+            font-weight 300
+            text-align center
+            margin 0px 0px 7px 0px
+
+        p.product-main-description
+            font-size 20px
+            color $dark-grey
+            text-align left
+            margin-bottom 40px
+            overflow hidden
+            display none
+
+        .product-links
+            display block
+            // Generates button for product links
+            a
+                product-additional-info-button-mixin()
+
+    // End main product info
+
+    // Social Share desktop
+    .share-product-desktop
+        display none
+
+    // Mobile and desktop share Start
+    .share-product-mobile, .share-product-desktop
+        extend-row-mixin()
+        background-color $white
+        padding-bottom 30px
+        h5
+            margin-top 0px
+            margin-bottom 10px
+            text-align center
+            font-size 18px
+            color $live-green
+            font-weight 300
+        // Share buttons
+        .inlineShareTxt
+            text-align center
+            > span
+                display none
+        .SocialShareBtnContainer
+            text-align center
+        .SocialMediaShareButton
+            padding 0
+            height 38px
+            width 38px
+            background-size 100% 100%
+            background-repeat no-repeat
+            &.SocialMediaShareButton--facebook
+                background-image url("/static/img/Facebook_Colour.png")
+            &.SocialMediaShareButton--twitter
+                background-image url("/static/img/Twitter_Colour.png")
+                margin-left 30px
+                margin-right 30px
+            &.SocialMediaShareButton--pinterest
+                background-image url("/static/img/Pinterest_Colour.png")
+            > div
+                display none
+
+    // Mobile share End
+
+    // Mobile share only Start
+        
+    .share-product-mobile
+        .SocialShareBtnContainer > div
+            display inline-block
+        
+    // Mopbile share only END
+
+    // Product properties browser
+
+    // Intro text
+    .property-browser-intro
+        font-size $h5
+        line-height 37px
+        font-weight 300
+        color $dark-grey
+        text-align center
+        padding 0px 20px 20px 20px
+        extend-row-mixin()
+        background-color $white
+        span
+            font-weight 500
+    // Tabs (hide at mobile)
+    .property-browser-tabs
+        display none
+    // Product properties tab content (carousel)
+    .product-properties-carousel
+        .slick-list
+            extend-row-mixin()
+            background-color $white
+        .slick-slide
+            padding 0 5px
+            height auto
+            display flex
+            flex-direction column
+            position relative
+    // Product property tab content
+    .product-property-panel-inner
+        border 1px solid #185f4d
+        padding 20px 15px 30px
+        border-bottom-left-radius 20px
+        border-top-right-radius 20px
+        expand-me-mixin()
+        background-color $white
+    // Panel title
+    .product-panel-name
+        text-align center
+        font-size 18px
+        color $live-green
+        font-weight 500
+        margin-bottom 35px
+        margin-top 0px
+    // Panel image
+    .product-property-image,
+    .product-property-image-hover
+        center-me()
+        margin-bottom 10px
+        height 50px
+        width auto
+    // General carousel item styles
+    .product-properties-carousel-item
+        p.property-description,
+        .properties-list
+            margin-bottom 0px
+        .properties-list-wrapper
+            display none
+        .property-description
+            color $live-green
+            font-size 18px
+            line-height 28px
+            font-weight 400
+            p
+                margin 0
+        // Formatting for harsh chemicals list
+        &.free-of-harsh-chemicals
+            .properties-list-wrapper
+                display block
+                margin-top 10px
+            .property-list
+                // Webkit overrides
+                -webkit-margin-before 0em
+                -webkit-margin-after 0em
+                -webkit-margin-start 0px
+                -webkit-margin-end 0px
+                -webkit-padding-start 0px
+            .property-list-item
+                list-style-type none
+                padding 10px 0px
+                font-size 18px
+                color $live-green
+                font-weight 300
+                border-top 1px dashed $live-green-light
+                p
+                    margin 0
+                    b
+                        font-weight 500
+    // Product properties browser END
+
+    // Product carousels
+    .product-detail-carousel
+        // Spacing at top for product paired carousel
+        &.product-detail-paired-carousel
+            padding-top 40px
+        // Carousel title
+        .carousel-title
+            font-size $h5
+            line-height 37px
+            color $dark-grey
+            text-align center
+            font-weight 300
+            margin-bottom 20px
+            margin-top 0px
+            span
+                font-size 16px
+                position relative
+                top -19px
+        .product-carousel-item
+            padding 30px 20px 30px 20px
+            box-shadow 0 5px 12px 0 rgba(0, 0, 0, 0.3)
+            expand-me-mixin()
+            background-color $white
+        // Product images
+        .product-image-wrap
+            height 200px
+        .product-image
+            height 100%
+            width auto
+            center-me()
+        // text centering for all elements
+        .product-collection-name,
+        .product-name,
+        .product-short-description,
+        .product-learn-more
+            text-align center
+        // Product learn more link
+        .product-learn-more
+            product-additional-info-button-mixin()
+            width 187px
+            margin-bottom 0px
+        // Product names and titles
+        .product-collection-name
+            font-size 20px
+            line-height 1.2
+            color $live-green
+            margin 15px 0px 10px 0px
+            font-weight 300
+        .product-name
+            margin-top 0px
+            margin-bottom 20px
+            font-size 20px
+            line-height 1.2
+            font-weight 300
+            color $live-green-light
+            expand-me-mixin()
+        // Hide product short description (paired products carousel) at mobile
+        .product-short-description
+            display none
+        // carousel slider and items
+        .slick-slide
+            padding 10px 5px 40px 5px
+            expand-me-mixin()
+            flex-grow 0
+            height auto
+            min-height 0
+            position relative
+        .slick-list
+            extend-row-mixin()
+    // End product carousels
+
+
+    // Secondary product description section
+    .product-secondary-description
+        text-align center
+        padding 50px 10px 25px 10px
+
+        .secondary-description-text
+            font-size $mobile-h3
+
+        .expand-contract-caret
+            width 40px
+            height 26px
+            margin 25px auto 0 auto
+            background-size 100%
+            background-position center center
+            background-repeat no-repeat
+            cursor pointer
+
+            &.contracted-caret
+                background-image url("/static/img/Default_Chevrons_Down_DrkGreen@2x.png")
+
+            &.expanded-caret
+                background-image url("/static/img/Default_Chevrons_Up_DrkGreen@2x.png")
+
+    // Accordion section
+    .product-info-accordion
+        border-top 1px solid $live-green
+        border-bottom 1px solid $live-green
+        padding 20px 10px 0 10px
+        color $dark-grey
+        font-family $Raleway
+
+        .panel-body
+            padding 0
+
+        .panel-group
+            margin 0
+
+        .panel
+            background-color transparent
+
+            .panel-heading
+                padding 0
+                background-color transparent
+
+        .panel-toggle
+            display flex
+            flex-direction row
+            justify-content flex-start
+            padding-bottom 20px
+
+            &::after
+                display none
+
+        i.glyphicon
+            border 1px solid $live-green
+            border-radius 50%
+            width 40px
+            height 40px
+            background-size 73%
+            background-position center center
+            background-repeat no-repeat
+            float none
+            margin 7px 20px 7px 0
+
+            &::before
+                display none
+
+            &.glyphicon-plus
+                background-image url("/static/img/Plus_Expand_DarkGreen@2x.png")
+
+            &.glyphicon-minus
+                background-image url("/static/img/Minus_Contract_DarkGreen@2x.png")
+
+        .title-block
+            color $dark-grey
+            font-size $mobile-h3
+            display flex
+            align-items center
+            font-weight 300
+            p
+                margin 0
+
+        .panel-collapse
+            font-size $mobile-h6
+
+            .info-block-wrapper
+                padding-bottom 15px
+
+// X-small Breakpoint
+@media (min-width: $screen-xs-min)
+    section.product-details
+        // override base(mobile) breakpoint styles
+
+        .product-secondary-description,
+        .product-info-accordion
+            padding-left 35px
+            padding-right 35px
+
+        .product-secondary-description
+
+            // hide "truncate" caret for secondary product description
+            .expand-contract-caret
+                display none
+
+// Small Breakpoint
+@media (min-width: $screen-sm-min)
+
+    section.product-details
+        // override xs breakpoint styles
+
+
+// Medium Breakpoint
+// This is being used for desktop
+@media (min-width: $screen-md-min)
+    .product-detail-panel > div
+        padding-left 100% * (120px/1440px)
+        padding-right 100% * (120px/1440px)
+
+    section.product-details
+        // override sm breakpoint styles
+
+        // Product image and info wrapper for desktop layout
+        .product-image-info-container
+            position relative
+            display flex
+            flex-direction row-reverse
+            &:before
+                position absolute
+                z-index 5
+                height 100%
+                width 100% * (1440px/1200px)
+                background-color #f1f1f1
+                content ""
+                left -1 * (100% * (120px/(1440px - 240px)))
+
+        // Product image carousel
+        .product-detail-image-carousel
+            position relative
+            z-index 10
+            width 100% * (700px / 1200px)
+            display flex
+            flex-direction column
+            // Category back link
+            .category-back-link
+                position absolute
+                z-index 16
+                left -1 * (100% * (500px/700px))
+                margin-top 35px
+            // Slides
+            .slick-slide
+                padding 0px
+                expand-me-mixin()
+                height auto
+            .slick-slider
+                expand-me-mixin()
+            .slick-list
+                // Extends image background to the edge of the screen
+                // extend-row-mixin-PDP()
+                margin 0
+                expand-me-mixin()
+            .slick-track
+                display block
+                expand-me-mixin()
+                flex-direction row
+            .carousel_image // Carousel image
+                height auto
+                background-position 42% 0
+                expand-me-mixin()
+            .carousel_image_wrapper // Carousel image background
+                box-shadow none
+                expand-me-mixin()
+            // Previous and next arrows
+            .slick-prev
+                left -1 * (100% * (570px/700px))
+            .slick-next
+                right -1 * (100% * (70px/1200px))
+
+        // Main product info
+        .product-info-wrap
+            margin 93px 0px 147px
+            background-color transparent
+            padding-bottom 0px
+            z-index 10
+            width 100% * (500px/1200px)
+            position relative
+            // Green leaves in bottom left corner
+            &:before
+                content ""
+                display block
+                position absolute
+                z-index -1
+                background-image url("/static/img/GreenLeaves_BottomRight.png")
+                width 14vw
+                height 14vw
+                bottom -9vw
+                background-size 100% 100%
+                transform rotate(270deg)
+                left -30%
+            // primary styles for info wrap
+            .product-info-border
+                box-shadow 0 2px 20px 0 rgba(0, 0, 0, 0.35)
+                border solid 0.5px #d8d8d8
+            // adjust alignment and size at desktop
+            h2.product-info-name,
+            h3.product-info-category
+                text-align left
+                font-size 36px
+                line-height 42px
+                margin-bottom 20px
+            p.product-main-description
+                display block
+                text-align left
+                font-size 20px
+                line-height 36px
+            .product-info-content
+                padding 40px 40px 20px 40px
+
+        // Product share
+        .share-product-desktop
+            display block
+            position absolute
+            top 0
+            right -3.5%
+            z-index 15
+            background-color $live-green
+            border-radius 50px
+            margin 0
+            padding-top 30px
+            margin-top 40px
+            width 70px
+            > div
+                display none
+            &.expanded
+                > div
+                    display block
+                h5
+                    &:after
+                        content "-"
+            h5
+                color $white
+                margin-left 8px
+                margin-right 8px
+                &:after
+                    content "+"
+                    display block
+                    font-size 40px
+                    line-height 20px
+                    font-weight 200
+                    margin-top 10px
+                &:hover
+                    cursor pointer
+            .SocialShareBtnContainer
+                > div
+                    display block
+            .SocialMediaShareButton
+                &.SocialMediaShareButton--facebook
+                    background-image url("/static/img/Facebook_White@2x.png")
+                &.SocialMediaShareButton--twitter
+                    background-image url("/static/img/Twitter_White@2x.png")
+                    margin-left 15px
+                    margin-right 15px
+                    margin-top 5px
+                    margin-bottom 5px
+                &.SocialMediaShareButton--pinterest
+                    background-image url("/static/img/PinInterest_White@2x.png")
+
+        // Mobile share
+        .share-product-mobile
+            display none
+
+        // Product properties browser
+        .product-properties-browser
+            margin 0 -1 * (100% * (120px/(1440px - 240px)))
+            background-color $white
+            padding-bottom 40px
+            padding-top 40px
+            .slick-slide
+                padding 0px 3px
+            // Tab wrapper
+            .property-browser-tabs
+                display block
+                list-style-type none
+                // Webkit overrides
+                -webkit-margin-before 0em
+                -webkit-margin-after 0em
+                -webkit-margin-start 0px
+                -webkit-margin-end 0px
+                -webkit-padding-start 0px
+                padding-left 100% * (120px/1440px)
+                padding-right 100% * (120px/1440px)
+                display flex
+                // Clear floats
+                clearfix()
+                margin-bottom 40px
+                flex-direction row
+            // individual tabs
+            .property-browser-tab
+                width 100% * (1/6)
+                float left
+                padding 0px 10px
+                text-align center
+                font-weight 500
+                font-size 14px
+                expand-me-mixin()
+                .product-property-image
+                    display block
+                .product-property-image-hover
+                    display none
+                span.toggle-name
+                    color $live-green
+                a.property-browser-toggle
+                    border 1px solid $live-green
+                    border-bottom-left-radius 20px
+                    border-top-right-radius 20px
+                    display block
+                    padding 10px
+                    expand-me-mixin()
+                    &.prop-browser-toggle-active
+                        background-color $live-green
+                        position relative
+                        span.toggle-name
+                            color $white
+                        .product-property-image-hover
+                            display block
+                        .product-property-image
+                            display none
+                        &:after
+                            content ""
+                            display block
+                            position absolute
+                            height 40px
+                            width 40px
+                            background-color $white
+                            border-left 1px solid $live-green
+                            border-top 1px solid $live-green
+                            transform rotate(45deg)
+                            margin 0 auto
+                            bottom -61px
+                            z-index 20
+                            left: 35%
+                &:hover
+                    a.property-browser-toggle
+                        text-decoration none
+                        cursor pointer
+
+            .slick-list
+                margin 0
+            .product-properties-carousel
+                width 100% * (1200px/1440px)
+                margin 0 auto
+            .property-browser-intro
+                -webkit-margin-before 0em
+                -webkit-margin-after 0em
+                margin 0
+            // Panel title
+            .product-panel-name
+                display none
+            // Panel image
+            .product-property-image
+                display none
+            // General carousel item styles
+            .product-properties-carousel-item
+                &.free-of-harsh-chemicals
+                    .property-list
+                        display flex
+                        flex-direction row
+                        flex-wrap wrap
+                    .properties-list-wrapper
+                        margin-top 30px
+                    .property-list-item
+                        width 25%
+                        float left
+                        text-align center
+                        padding-top 0px
+                        padding-bottom 30px
+                        padding-right 30px
+                        padding-left 30px
+                        &:nth-child(-n+4)
+                            border-top none
+                        &:nth-child(4n)
+                            border-right none
+                        &:nth-child(1n+5)
+                            padding-top 30px
+                            padding-bottom 0px
+                        border-right 1px dashed $live-green
+
+        .product-property-panel-inner
+            border-bottom-right-radius 20px
+            border-top-left-radius 20px
+            padding 40px
+
+        // End properties browser
+
+        // Product carousels
+        .product-detail-carousel
+            box-shadow 0 5px 12px 0 rgba(0, 0, 0, 0.3)
+
+            .carousel-title
+                font-size $h3
+                margin-bottom 30px
+
+            .product-carousel-item
+                box-shadow none
+
+            .slick-list
+                // Product related and paired carousels not full bleed at desktop
+                // Do not need negative margins
+                margin 0px
+
+            // Paired product carousel
+            &.product-detail-paired-carousel
+                background-color $white
+                padding 30px 50px 50px 50px
+                margin-bottom 50px
+
+                .slick-slide
+                    padding 0
+
+                    &:first-child
+                        border-right 1px solid $live-green
+
+                .paired-product-carousel-item
+                    padding 0 25px 10px 25px
+
+                .paired-product-image-wrap
+                    margin-bottom 10px
+
+                .paired-product-details-wrap
+                    display flex
+                    flex-direction column
+                    flex 1 0 auto
+
+                .paired-product-name
+                    flex-grow 0
+
+                // Show product short description (paired products carousel) at desktop
+                .paired-product-short-description
+                    display flex
+                    flex 1 0 auto
+                    margin-bottom 30px
+
+            // Related product carousel
+            &.product-detail-related-carousel
+                padding 30px 45px 30px 45px
+                background-color $white
+                margin-bottom 60px
+
+                .carousel-title
+                    margin-bottom 40px
+
+                .related-product-carousel-item
+                    padding 0 10px 10px 10px
+
+                .related-product-name
+                    font-size $mobile-h5
+
+                .slick-arrow
+
+                    img
+                        width 20px
+
+        // Secondary product description
+        .product-secondary-description
+            padding 80px 0 40px 0
+            text-align left
+            max-width 1000px
+            margin 0
+
+            .secondary-description-text
+                font-size $small-sub-heading
+
+        // Ingredients/Instructions Accordion
+        .product-info-accordion
+            padding 42px 0 30px 0
+            border-bottom 0 none
+
+            .title-block
+                font-size $h5
+
+            .panel-collapse
+                font-size $mobile-h5
+                padding-left 60px
+                max-width 800px
+
+            .panel-default
+                margin-bottom 17px
+
+            .panel-toggle
+                padding-bottom 27px
+
+// Large Breakpoint
+@media (min-width: $screen-lg-min)
+    section.product-details
+        // override md breakpoint styles
+
+        // Main product info
+        .product-info-wrap
+            .product-info-content
+                padding 40px 40px 0px 40px
+            .product-links
+                // All links
+                a
+                    margin-bottom 40px
+                    width 49%
+                    max-width 182px
+                .buy-online
+                    float left
+                .find-in-store
+                    float right
+
+        // Project properties browser
+        .product-properties-browser
+            .property-browser-tabs
+                padding-left 100% * (240px/1440px)
+                padding-right 100% * (240px/1440px)
+
+        // Product detail carousels
+        .product-detail-carousel
+
+            // Paired product carousel
+            &.product-detail-paired-carousel
+                padding 30px 40px 50px 40px
+
+                .paired-product-carousel-item
+                    flex-direction row
+                    padding-bottom 0
+                    max-width 500px
+                    margin 0 auto
+
+                .paired-product-image-wrap
+                    width 40%
+                    height auto
+                    padding 0 30px 0 0
+                    margin 0
+
+                    img
+                        width 95%
+                        height auto
+
+                .paired-product-details-wrap
+                    width 60%
+                    padding-bottom 10px
+
+                .paired-product-collection
+                    font-size $small-sub-heading
+                    text-align left
+                    margin-bottom 14px
+
+                .paired-product-name,
+                .paired-product-short-description
+                    font-size $mobile-h4
+                    text-align left
+
+                .paired-product-learn-more
+                    margin 0
+
+            // Related product carousel
+            &.product-detail-related-carousel
+
+                .related-product-collection
+                    font-size $small-sub-heading
+
+                .related-product-carousel-item
+                    padding-left 25px
+                    padding-right 25px

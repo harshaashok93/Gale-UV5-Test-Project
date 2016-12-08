@@ -1,0 +1,47 @@
+.where-to-buy-row
+    background url('/static/img/Background_News2x.jpg')
+
+    .richtext
+        .rich-text
+            text-align center
+            
+            h1
+                font-size $h2
+                font-weight $font300
+                color $live-green
+                margin-bottom 30px
+                
+                @media screen and (max-width $screen-xs-max)
+                    font-size $mobile-h2
+                    font-weight $font300
+                
+    .iframe-column
+        overflow hidden
+
+        @media screen and (max-width $screen-xs-max)
+            padding-left 15px
+            padding-right 15px
+
+        .store-locator-container
+            z-index 9
+            position relative
+
+            .wrapper
+                // position relative
+
+                .iframe-container
+                    margin-top 0px
+                    box-shadow 0 5px 12px 0 rgba(0, 0, 0, 0.3)
+                    background-color $white
+                
+        &:after
+            display block
+            content ""
+            background url('/static/img/GreenLeaves_BottomRight.png')
+            position absolute
+            bottom -40px
+            right -17px
+            background-size contain
+            width 200px
+            height 200px
+            

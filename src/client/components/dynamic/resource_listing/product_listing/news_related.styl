@@ -1,0 +1,103 @@
+// Styles for the related articles carousel on the news detail page
+.news-detail-related-carousel
+	padding-left 25px
+	padding-right 25px
+	padding-bottom 100px
+	
+	@media screen and (min-width 1024px)
+		padding-left 0px
+		padding-right 0px
+		padding-bottom 60px
+		max-width 1000px
+		margin 0 auto
+	
+	@media screen and (min-width $screen-lg)
+		padding-bottom 60px
+		max-width 1200px
+		margin 0 auto
+	
+	.carousel-title
+		margin 0 
+		padding 10px 0 30px 0 
+		font-size $mobile-h2
+		font-weight 300
+		text-align center
+		color $dark-grey
+		
+		@media screen and (min-width $screen-md)
+			padding 20px 0 25px 0
+			font-size $h3
+	
+	.slick-track
+
+		@media screen and (min-width 1024px)
+			width 100% !important // necessary to center items on large screens
+			display flex
+			
+	.slick-prev
+		left -1.5%
+		
+		@media screen and (min-width $screen-md)
+			left -0.5%
+		
+	.slick-next
+		right -1.5%
+		
+		@media screen and (min-width $screen-md)
+			right -0.5%
+		
+	.slick-slide
+		padding 0px 5px 15px 5px
+		display flex
+		flex 1 0 auto
+		position relative
+		
+		@media screen and (min-width 1024px)
+			padding 0 20px 15px 20px
+		
+		div
+			min-height 0 // nuking the min-height requirement established in another stylesheet
+			
+	.slick-list
+		// extend-row-mixin()
+		margin 0 -25px
+		@media screen and (min-width $screen-sm)
+			margin 0
+			
+	.news-listing 
+		margin 0 auto
+		width 100%
+		
+	.news-listing-card
+		display flex
+		flex-direction column
+		margin 0
+		flex 1 0 auto
+		padding-bottom 30px
+		height 430px
+		
+		@media screen and (min-width $screen-sm)
+			margin 0 auto
+			display flex
+			
+		@media screen and (min-width 1024px)
+			height 510px
+			width 100%
+		
+		.title 
+			min-height 0
+			flex 1 0 auto // allow the title to expand to fill the empty space
+			margin 20px
+			
+		.readMore 
+			text-align center
+			
+			a
+				position static // nuking absolute positioning established in another stylesheet
+	
+	/* This must always come last because there's a bug where if I put this
+	higher up in the stylesheet, it disables every rule that comes after - no clue why.
+	A. Craig - Dec 1 2016	
+	override the inline display: block on arrows	*/	
+	.slick-disabled
+		display none !important

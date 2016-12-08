@@ -1,0 +1,4 @@
+# Unchained-UI
+git+ssh://git@github.com/Gale43/GALE-Unchained-UI.git@0.9.31
+git+ssh://git@github.com/Gale43/Gale-Unchained-wagtailtrans.git@0.1.0
+

@@ -1,0 +1,41 @@
+/* Bootstrap Customize should be defined above the @import bootstrap */
+
+
+
+/* import bootstrap-styl */
+@import bootstrap
+
+@import '../../src/client/components/styles/variables'
+@import '../../src/client/components/styles/mixins'
+/* import the unchained_ui styles here */
+@import '../../node_modules/unchained_ui/unchained_ui/themes/default/main'
+
+// ========== Page Styles =================
+@import '../../src/client/components/styles/header'
+@import '../../src/client/components/styles/footer'
+@import '../../src/client/components/styles/home'
+@import '../../src/client/components/styles/legal_notice'
+@import '../../src/client/components/styles/legal_pages'
+@import '../../src/client/components/styles/faq'
+@import '../../src/client/components/styles/products'
+@import '../../src/client/components/styles/contact'
+@import '../../src/client/components/styles/homepage_carousel'
+@import '../../src/client/components/styles/our_story'
+@import '../../src/client/components/styles/store'
+@import '../../src/client/components/styles/search'
+@import '../../src/client/components/styles/error'
+@import '../../src/client/components/styles/newsletter'
+
+/* Custom Project Styles under here */
+@import 'components/dynamic/our_story/*'
+@import 'components/dynamic/resources/product_details/*'
+@import 'components/dynamic/resource_listing/product_listing/*'
+@import 'components/dynamic/featured_category/*'
+@import 'components/dynamic/store_locator/*'
+@import 'components/dynamic/most_read_articles/*'
+
+
+/*-------- common stylus ----------*/
+body {
+    font-family $Raleway
+}

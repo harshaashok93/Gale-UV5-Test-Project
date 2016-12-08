@@ -1,0 +1,368 @@
+.home-banner
+    .carousel-image
+        height 100%
+        background-size cover
+        background-position center center
+
+
+.cards-wrapper
+    padding 56px 115px
+    background url('/static/img/Background_Marble.jpg') no-repeat top center
+    background-size cover
+    @media screen and (max-width $screen-sm-max)
+        padding 20px 20px
+    .cards-column
+        padding 0 30px
+        @media screen and (max-width $screen-xs-max)
+            padding 0 15px
+
+        .featured-category
+            border-top 5px solid $live-green
+            width 100%
+            background-color $white
+            box-shadow 0 8px 20px 0 rgba(0, 0, 0, 0.3)
+            margin-bottom 60px
+            display inline-block
+            position relative
+            overflow hidden
+
+            h2
+                font-size $h1
+                font-weight $font300
+                color $live-green
+                margin 15px 0 20px
+
+                @media screen and (max-width $screen-xs-max)
+                    font-size 2em
+
+                @media screen  and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                    font-size 1.8em
+                img
+                    position relative
+                    top -6px
+                    width 36px
+                    padding 0
+                    @media screen and (max-width $screen-xs-max)
+                        width 20px
+                    @media screen  and (max-width $screen-sm-max)
+                        width 24px
+
+            img
+                margin 0 auto
+                padding 0 60px
+                @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                    padding 20px 30px
+
+            a
+                button-1()
+                text-decoration none
+                margin-bottom 30px
+                @media screen  and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                    width 148px
+                    font-size 1.1em
+                    background-size 10px
+                    margin-bottom 30px
+
+            &:hover
+                @media screen and (min-width 1280px)
+                    .description
+                        transform translateY(0%)
+                        transition 0.3s ease-in all
+
+            .description
+                display block
+                width 100%
+                position absolute
+                transform translateY(100%)
+                left 0
+                right 0
+                bottom 0
+                font-size $mobile-h5
+                background-color rgba(24,83,70, 0.8)
+                color $white
+                line-height 1.5
+                padding 20px 35px
+                a
+                    button-2()
+                    line-height 24px
+                    text-decoration none
+                    background-position center right 20px
+                    line-height 40px
+                    @media screen  and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                        width 128px
+                        font-size 1.2em
+
+        .featured-card-block
+            border-top 5px solid $grey
+            background $white
+            box-shadow 0 8px 20px 0 rgba(0, 0, 0, 0.3)
+            margin-bottom 60px
+            display inline-block
+            position relative
+            overflow hidden
+
+            .rich-text
+                h4
+                    font-size $h6
+                    color $text-grey
+                    font-weight $font300
+                    line-height 1
+                    padding 24px 32px
+
+                    @media screen and (width 1280px)
+                        font-size 20px
+                        padding 24px 28px
+
+                    @media screen and (max-width $screen-xs-max)
+                        font-size 1.2em
+
+                    @media screen  and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                        font-size 0.8em
+                        padding 5px 12px
+
+            .image-block
+                box-shadow none
+                margin 0
+
+            .links
+                position absolute
+                bottom 20px
+                left 0
+                right 0
+                margin 0 auto
+
+                a
+                    button-2()
+                    text-decoration none
+                    line-height 24px
+                    font-size $CTA-copy
+                    @media screen  and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                        width 148px
+                        font-size 1.1em
+                        background-size 10px
+
+            &:hover
+                @media screen and (min-width 1280px)
+                    .description
+                        transform translateY(0%)
+                        transition 0.3s ease-in all
+
+            .description
+                display block
+                width 100%
+                position absolute
+                transform translateY(100%)
+                left 0
+                right 0
+                bottom 0
+                font-size $mobile-h5
+                background-color rgba(152,152,152, 0.8)
+                color $white
+                line-height 1.5
+                padding 20px 35px
+                a
+                    button-2()
+                    text-decoration none
+                    @media screen  and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                        width 148px
+                        font-size 1.1em
+                        background-size 10px
+
+        .image-block
+            display inline-block
+            margin-bottom 60px
+            border 0px
+            box-shadow 0 8px 20px 0 rgba(0, 0, 0, 0.3)
+            img
+                width 100%
+
+        .featured-image-block
+            border-top 5px solid $grey
+            margin-bottom 60px
+            display inline-block
+            .image-block
+                border 0
+                box-shadow none
+                margin 0
+
+            .rich-text
+                position absolute
+                top 50%
+                bottom 0
+                left 0
+                right 0
+                margin 0 auto
+                transform translateY(-50%)
+                h4
+                    font-size $h4
+                    font-weight $font300
+                    line-height 1.4
+                    text-align center
+                    color $text-grey
+                    padding 0 48px
+                    margin 0
+
+                    @media screen and (width 1280px)
+                        font-size 26px
+
+                    @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                        font-size $mobile-h5
+                        padding 0 20px
+
+                    @media screen and (max-width $screen-xs-max)
+                        font-size 1.4em
+                        padding 0 15px
+
+        .social-card
+            border-top 5px solid $grey
+            min-height 270px
+            width 100%
+            margin-bottom 60px
+            display inline-block
+            background-color $white
+            box-shadow 0 8px 20px 0 rgba(0, 0, 0, 0.3)
+
+            @media screen and (max-width $screen-sm-max)
+                min-height 220px
+
+            .twitter-card
+                text-align center
+                position relative
+                height 100%
+                display inline-block
+                width 100%
+                p
+                    margin-top 40px
+                    font-size $mobile-h5
+                    line-height 1.6
+                    color $dark-grey
+                    float left
+                    width 73%
+                    @media screen and (max-width $screen-xs-max)
+                        float none
+                        margin-left 50px
+                        margin-top 20px
+                        word-wrap break-word
+                        padding-right 20px
+
+                    @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                        float none
+                        width 100%
+                        word-wrap break-word
+                        font-size 14px
+                        margin-left 40px
+                        padding-right 60px
+                        margin-top 20px
+                .follow-us
+                    button-2()
+                    line-height 44px
+                    text-decoration none
+                    position absolute
+                    font-size $CTA-copy
+                    bottom -50px
+                    left 0
+                    right 0
+                    margin 0 auto
+                    @media screen  and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                        width 148px
+                        font-size 1.1em
+                        background-size 10px
+                        position relative
+                        bottom 0
+                        margin-bottom 30px
+                    @media screen and (max-width $screen-xs-max)
+                        position relative
+                        margin-bottom 30px
+                        bottom 0
+
+                .left-ribbon
+                    width 75px
+                    height 60px
+                    line-height 60px
+                    box-shadow 0 2px 4px 0 rgba(168, 168, 168, 0.5)
+                    background $white
+                    top 20px
+                    float left
+                    left -10px
+                    position relative
+                    @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                        width 55px
+
+                    img
+                        width 20px
+
+                .left-ribbon::before
+                    display block
+                    width 10px
+                    height 10px
+                    position absolute
+                    top 60px
+                    left 0px
+                    content ""
+                    z-index 1
+                    border-bottom 10px solid transparent
+                    border-right 10px solid $grey
+
+
+            .instagram-card
+                text-align center
+                position relative
+                height 270px
+                display block
+                width 100%
+                background-size cover
+                background-position center center
+                background-repeat no-repeat
+                @media screen and (max-width $screen-sm-max)
+                    height 220px
+
+                .follow-us
+                    button-2()
+                    text-decoration none
+                    position absolute
+                    font-size $CTA-copy
+                    line-height 44px
+                    bottom 20px
+                    left 0
+                    right 0
+                    margin 0 auto
+                    @media screen  and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                        width 148px
+                        font-size 1.1em
+                        background-size 10px
+
+
+                .left-ribbon
+                    width 75px
+                    height 60px
+                    line-height 60px
+                    box-shadow 0 2px 4px 0 rgba(168, 168, 168, 0.5)
+                    background $white
+                    top 20px
+                    float left
+                    left -10px
+                    position relative
+                    @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+                        width 55px
+
+                    img
+                        width 20px
+
+                .left-ribbon::before
+                    display block
+                    width 10px
+                    height 10px
+                    position absolute
+                    top 60px
+                    left 0px
+                    content ""
+                    z-index 1
+                    border-bottom 10px solid transparent
+                    border-right 10px solid $grey
+
+.playvideo
+    .modal-body
+        padding 0px
+        height 350px
+        iframe
+            border 0

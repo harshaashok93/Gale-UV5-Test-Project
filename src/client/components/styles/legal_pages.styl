@@ -1,0 +1,227 @@
+// Styling for the privacy policy, the terms of use, and the copyright policy
+
+.legal-page
+
+    .legal-page-heading
+        background url(/static/img/legal-notice-header-bg.png)
+        background-size 100%
+        padding 27px 15px
+        
+        h1
+            font-size $mobile-h2
+            font-weight $font300
+            font-family $Raleway
+            font-style normal
+            font-stretch normal
+            text-align center
+            color #185f4d
+            margin 0
+            
+            @media screen and (min-width $screen-sm)
+                font-size $medium-heading
+                
+            @media screen and (min-width $screen-md)
+                font-size $h2
+                
+    .legal-page-bg
+        padding-bottom 121px
+        background-image url("/static/img/GreenLeaves_BottomRight.png")
+        background-repeat no-repeat 
+        background-position right -11px bottom -68px
+        background-size 235px
+        
+        @media screen and (min-width $screen-md)
+            background-position bottom -54px right -20px
+            background-size 280px
+    
+    // Common styles for all copy sections    
+    .legal-page-content,
+    .last-modified,
+    .legal-intro-copy
+        float none
+        display block
+        clear both
+        margin 0 auto
+            
+        @media screen and (min-width $screen-sm)
+            width 80%
+            max-width 1016px
+            
+    // The "last modified" date section
+    .last-modified
+        border-bottom 1px solid $live-green
+        padding 20px 0
+        margin 0 20px
+        width auto
+        
+        @media screen and (min-width $screen-xs)
+            padding 30px 0
+            margin 0 35px
+        
+        @media screen and (min-width $screen-sm)
+            width 80%
+            margin 0 auto
+            max-width 1016px
+            
+        @media screen and (min-width $screen-md)
+            padding 40px 0
+            
+        p
+            font-size $mobile-h5
+            text-align center
+            margin 0
+                
+            @media screen and (min-width $screen-md)
+                font-size $small-sub-heading
+                text-align left
+    
+    // The intro copy section
+    .legal-intro-copy
+        border-bottom 1px solid $live-green
+        padding 20px 0
+        margin 0 20px
+        width auto
+        
+        @media screen and (min-width $screen-xs)
+            padding 30px 0
+            margin 0 35px
+            
+        @media screen and (min-width $screen-sm)
+            padding 30px 0 20px 0
+            width 80%
+            margin 0 auto
+            max-width 1016px
+            
+        p, 
+        ul, 
+        ol, 
+        li, 
+        a, 
+        span
+            font-size $mobile-h5
+            line-height 1.8
+            
+            @media screen and (min-width $screen-md)
+                font-size $CTA-copy
+        
+    // The wrapper for the expandable sections
+    .legal-page-content
+        padding 0 20px
+        
+        @media screen and (min-width $screen-xs)
+            padding 0 35px
+            
+        @media screen and (min-width $screen-sm)
+            padding 0
+            
+        p, 
+        ul, 
+        ol, 
+        li, 
+        span, 
+        a
+            font-family $Raleway
+            font-size $CTA-copy
+            font-weight $font300
+            font-style normal
+            font-stretch normal
+            line-height 1.8
+            text-align left
+            color $dark-grey
+            margin 0
+       
+        .panel-body
+            border-bottom 1px solid $live-green
+            padding 0
+            
+            @media screen and (min-width $screen-md)
+                padding 10px 0
+            
+        .panel-heading
+            padding  20px 0
+            background transparent
+
+        .panel-title
+                
+            a
+                display flex
+                flex-direction row-reverse // Put the icon before the question
+                justify-content space-between
+                align-items center
+        
+            // The section title      
+            .question-block
+                font-size $mobile-h3
+                icon-space = 60px
+                width "calc(100% - %s)" % icon-space
+                
+                @media screen and (min-width $screen-md)
+                    icon-space = 100px
+                    width "calc(100% - %s)" % icon-space
+                
+                h3
+                    font-weight 300
+                    margin 0
+                    color $live-green
+                    
+                    @media screen and (min-width $screen-md)
+                        font-size $medium-heading
+                    
+        .panel-collapse
+                    
+            // The section content (visible once expanded)
+            .answer-block
+                margin 0
+                padding-bottom 20px
+                
+                @media screen and (min-width $screen-md)
+                    margin-left 50px
+                
+                p, 
+                ul, 
+                ol, 
+                li, 
+                a, 
+                span
+                    font-size $mobile-h5
+                    
+                    @media screen and (min-width $screen-md)
+                        font-size $CTA-copy
+
+        // The expand/collapse icon - default styles
+        i.glyphicon
+            width 40px
+            height 40px
+            float right
+            border 1px solid $live-green
+            border-radius 50%
+            margin 0
+            background-color $white
+            background-repeat no-repeat
+            background-size 65%
+            background-position center center
+            flex-grow 0
+            flex-shrink 0
+       
+        // The plus ( + ) icon  
+        i.glyphicon-plus
+            background-image url(/static/img/Plus_Expand_DarkGreen@2x.png)
+            
+            // Delete any default icon
+            &:before
+                content ''
+
+        // The minus ( - ) icon
+        i.glyphicon-minus
+            background-image url(/static/img/Minus_Contract_DarkGreen@2x.png)
+            
+            // Delete any default icon
+            &:before
+                content ''
+        
+        // Zeroing out inherent margins, paddings, and backgrounds
+        .panel-group,
+        .panel-default
+            margin 0
+            padding 0
+            background transparent
